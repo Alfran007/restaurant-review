@@ -1,5 +1,6 @@
 package com.example.restaurantreview.service;
 
+import com.example.restaurantreview.entity.PriceRange;
 import com.example.restaurantreview.entity.Restaurant;
 import com.example.restaurantreview.repository.RestaurantRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -33,8 +34,8 @@ class RestaurantServiceTest {
     @Test
     void getAllRestaurants_returnsAllRestaurants() {
         List<Restaurant> restaurants = Arrays.asList(
-                new Restaurant(1L, "Test Restaurant1", "Dessert", "Test Location", "LOW", new ArrayList<>()),
-                new Restaurant(2L, "Test Restaurant2", "Cuisine", "Test Location", "HIGH", new ArrayList<>())
+                new Restaurant(1L, "Test Restaurant1", "Dessert", "Test Location", PriceRange.LOW, new ArrayList<>()),
+                new Restaurant(2L, "Test Restaurant2", "Cuisine", "Test Location", PriceRange.HIGH, new ArrayList<>())
         );
         when(restaurantRepository.findAll()).thenReturn(restaurants);
 
@@ -45,7 +46,7 @@ class RestaurantServiceTest {
 
     @Test
     void addRestaurant_savesAndReturnsRestaurant() {
-        Restaurant restaurant = new Restaurant(1L, "New Restaurant", "Cuisine", "Test Location", "HIGH", new ArrayList<>());
+        Restaurant restaurant = new Restaurant(1L, "New Restaurant", "Cuisine", "Test Location", PriceRange.HIGH, new ArrayList<>());
         when(restaurantRepository.save(restaurant)).thenReturn(restaurant);
 
         Restaurant result = restaurantService.addRestaurant(restaurant);
@@ -55,7 +56,7 @@ class RestaurantServiceTest {
 
     @Test
     void getRestaurantById_returnsRestaurant_whenIdExists() {
-        Restaurant restaurant = new Restaurant(1L, "Test Restaurant", "Cuisine", "Test Location", "HIGH", new ArrayList<>());
+        Restaurant restaurant = new Restaurant(1L, "Test Restaurant", "Cuisine", "Test Location", PriceRange.HIGH, new ArrayList<>());
         when(restaurantRepository.findById(1L)).thenReturn(Optional.of(restaurant));
 
         Restaurant result = restaurantService.getRestaurantById(1L);

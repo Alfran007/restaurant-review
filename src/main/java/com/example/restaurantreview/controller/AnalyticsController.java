@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api//analytics")
+@RequestMapping("/api/analytics")
 public class AnalyticsController {
 
     private final ReviewService reviewService;

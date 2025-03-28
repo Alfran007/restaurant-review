@@ -23,6 +23,6 @@ public class Review {
     private ReviewStatus status;
 
     @ManyToOne
-    @JoinColumn(name = "restaurant_id")
+    @JoinColumn(name = "restaurant_id", nullable = false)
     private Restaurant restaurant;
 }

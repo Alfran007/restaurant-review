@@ -1,5 +1,6 @@
 package com.example.restaurantreview.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,9 +19,11 @@ public class Restaurant {
     private String name;
     private String cuisineType;
     private String address;
-    private String priceRange;
+    @Enumerated(EnumType.STRING)
+    private PriceRange priceRange;
 
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Review> reviews;
 
 //    public Restaurant(Long id, String name, String cuisineType, String address, String priceRange, List<Review> reviews) {
