@@ -1,0 +1,13 @@
+com\example\restaurantreview\entity\Restaurant.class
+com\example\restaurantreview\entity\ReviewStatus.class
+com\example\restaurantreview\repository\RestaurantRepository.class
+com\example\restaurantreview\service\RestaurantService.class
+config\SecurityConfig.class
+config\SwaggerConfig.class
+com\example\restaurantreview\controller\RestaurantController.class
+com\example\restaurantreview\controller\ReviewController.class
+com\example\restaurantreview\repository\ReviewRepository.class
+com\example\restaurantreview\RestaurantReviewApplication.class
+com\example\restaurantreview\service\ReviewService.class
+com\example\restaurantreview\controller\AnalyticsController.class
+com\example\restaurantreview\entity\Review.class

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.restaurantreview.service.RestaurantServiceTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.656 s -- in com.example.restaurantreview.service.RestaurantServiceTest
