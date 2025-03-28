@@ -4,7 +4,6 @@ com\example\restaurantreview\entity\ReviewStatus.class
 com\example\restaurantreview\repository\RestaurantRepository.class
 com\example\restaurantreview\service\RestaurantService.class
 com\example\restaurantreview\exception\ResourceNotFoundException.class
-config\SecurityConfig.class
 com\example\restaurantreview\exception\GlobalExceptionHandler.class
 config\SwaggerConfig.class
 com\example\restaurantreview\controller\RestaurantController.class
